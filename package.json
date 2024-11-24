@@ -1,0 +1,17 @@
+{
+  "name": "keyin-math-competition-base",
+  "version": "1.0.0",
+  "description": "A repository to use as a base when building your math competition app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "jest"
+  },
+  "author": "Matthew English",
+  "license": "MIT",
+  "devDependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "jest": "^29.7.0"
+  }
+}
