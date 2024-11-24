@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div class="main-content">
+    <div class="completion-container">
+        <h1>Congratulations!</h1>
+        <p>Your quiz is complete.</p>
+        <% if (streak > 0) { %>
+            <p class="streak-message">Your current streak: <span class="streak-highlight"><%= streak %></span></p>
+        <% } else { %>
+            <p class="streak-message">Oops! Your streak has been reset.</p>
+        <% } %>
+        <div class="btn-container">
+            <a href="/quiz" class="btn">Start Another Quiz</a>
+            <a href="/leaderboards" class="btn">View Leaderboards</a>
+            <a href="/" class="btn">Return to Home</a>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

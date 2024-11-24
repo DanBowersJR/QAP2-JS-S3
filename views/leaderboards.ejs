@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<div class="main-content">
+    <h1>Leaderboards</h1>
+    <p>Top 10 Streaks:</p>
+    <table class="leaderboards-table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Streak</th>
+                <th>Date Achieved</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (leaderboards.length > 0) { %>
+                <% leaderboards.forEach((entry, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= entry.streak %></td>
+                        <td><%= entry.date %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="3">No streaks recorded yet.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <div class="navigation__container">
+        <a href="/" class="btn">Return to Home</a>
+        <a href="/quiz" class="btn">Start New Quiz</a>
+    </div>
+</div>
+</body>
+</html>
